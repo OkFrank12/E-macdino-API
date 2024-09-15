@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 export const sendOrderMail = async (data) => {
   try {
     const transport = createTransport({
-      host: "wghp3.wghservers.com",
+      host: process.env.HOST,
       port: 465,
       secure: true,
       auth: {
