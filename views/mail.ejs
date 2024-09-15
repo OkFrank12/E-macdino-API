@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Macdino</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        background-color: #f7f7f7;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 2rem;
+      }
+
+      h3 {
+        color: #555;
+        font-size: 1.5rem;
+      }
+
+      table {
+        width: 100%;
+        max-width: 600px;
+        border-collapse: collapse;
+        margin: 2rem 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        padding: 1rem;
+        border: 1px solid #ddd;
+        text-align: left;
+        font-size: 1rem;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      td {
+        background-color: #f9f9f9;
+      }
+
+      tr:nth-child(even) td {
+        background-color: #f1f1f1;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>An Order has been placed</h1>
+    <h3>Order ID: <%= orderNo %></h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Username</td>
+          <td><%= firstName %></td>
+        </tr>
+        <tr>
+          <td>Email Address</td>
+          <td><%= email %></td>
+        </tr>
+        <tr>
+          <td>Phone Number</td>
+          <td><%= phone %></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td><%= location %></td>
+        </tr>
+        <tr>
+          <td>Current Order No</td>
+          <td><%= date %></td>
+        </tr>
+        <tr>
+          <td>Time of Order</td>
+          <td><%= time %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><%= description %></p>
+  </body>
+</html>
