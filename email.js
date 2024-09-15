@@ -41,12 +41,10 @@ export const sendOrderMail = async (data) => {
 export const sendOrderNo = async (data) => {
   try {
     const transport = createTransport({
-      host: process.env.HOST,
-      port: 465,
-      secure: true,
+      service: "gmail",
       auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASS,
+        user: process.env.GEMAIL,
+        pass: process.env.GPASS,
       },
     });
 
@@ -58,7 +56,7 @@ export const sendOrderNo = async (data) => {
     const readFile = await renderFile(locateEJSFile, mailData);
 
     const mailer = {
-      from: `You placed an order <${process.env.EMAIL}>`,
+      from: `You placed an order <${process.env.GEMAIL}>`,
       to: data.email,
       subject: "Your Order has been recieved",
       html: readFile,
