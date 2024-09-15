@@ -41,7 +41,9 @@ export const sendOrderMail = async (data) => {
 export const sendOrderNo = async (data) => {
   try {
     const transport = createTransport({
-      service: "gmail",
+      host: process.env.HOST,
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL,
         pass: process.env.PASS,
