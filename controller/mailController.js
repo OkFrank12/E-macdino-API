@@ -15,7 +15,7 @@ export const mailController = async (req, res) => {
       date,
       time,
       description,
-      orderNo: `E-mac-${orderNo}`,
+      orderNo: `EMAC-${orderNo}`,
     };
 
     sendOrderMail(mailData).then(() => {
