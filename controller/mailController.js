@@ -5,7 +5,7 @@ export const mailController = async (req, res) => {
   try {
     const { firstName, email, phone, location, date, time, description } =
       req.body;
-    const orderNo = crypto.randomBytes(6).toString("hex");
+    const orderNo = crypto.randomBytes(3).toString("hex");
 
     const mailData = {
       firstName,
